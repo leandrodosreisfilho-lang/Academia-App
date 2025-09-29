@@ -42,23 +42,23 @@ public class AlunoAcademia {
     }
 
     public void exibirClassificacaoDeSaude(){
-        if (resultadoIMC <= 18.5){
+        if (resultadoIMC < 18.6){
             System.out.println("Status: Abaixo do peso");
 
-        } else if (resultadoIMC >= 18.6 && resultadoIMC < 24.9) {
-            System.out.println("Status: Peso ideal");
+        } else if (resultadoIMC >= 18.6 && resultadoIMC < 25.0) {
+            System.out.println("Status: Peso ideal (Parabens)");
 
-        } else if (resultadoIMC >= 25.0 && resultadoIMC < 29.9) {
+        } else if (resultadoIMC >= 25.0 && resultadoIMC < 30.0) {
             System.out.println("Status: Levemente acima do peso");
 
-        } else if (resultadoIMC >= 30.0 && resultadoIMC < 34.9) {
+        } else if (resultadoIMC >= 30.0 && resultadoIMC < 35.0) {
             System.out.println("Status: Obesidade grau 1");
 
-        } else if (resultadoIMC >= 35.0 && resultadoIMC < 39.9) {
-            System.out.println("Status: Obesidade grau 2");
+        } else if (resultadoIMC >= 35.0 && resultadoIMC < 40.0) {
+            System.out.println("Status: Obesidade grau 2 (Severa)");
 
         } else {
-            System.out.println("Status: Obesidade 3 (mórbida)");
+            System.out.println("Status: Obesidade grau 3 (Mórbida)");
 
         }
     }
