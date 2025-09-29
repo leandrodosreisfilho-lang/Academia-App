@@ -8,7 +8,7 @@ public class AlunoAcademia {
     double peso;
     double resultadoIMC;
 
-    public void exbirDados(){
+    public void obterDados(){
         Scanner leitor = new Scanner(System.in);
 
         System.out.println("------------------------");
@@ -22,12 +22,44 @@ public class AlunoAcademia {
         System.out.println("PESO DO ALUNO: ");
         peso = leitor.nextDouble();
 
-        resultadoIMC;
+        System.out.println("-----------RESULTADO-----------");
 
-    };
+        calcularIMC();
+        exibirDados();
+        exibirClassificacaoDeSaude();
+
+        System.out.println("------------------------");
+
+    }
 
     public void calcularIMC(){
         resultadoIMC = peso / (altura * altura);
     }
 
+    public void exibirDados(){
+        System.out.println("Aluno: " + nomeDoAluno);
+        System.out.println("Imc calculado: " + resultadoIMC);
+    }
+
+    public void exibirClassificacaoDeSaude(){
+        if (resultadoIMC <= 18.5){
+            System.out.println("Status: Abaixo do peso");
+
+        } else if (resultadoIMC >= 18.6 && resultadoIMC < 24.9) {
+            System.out.println("Status: Peso ideal");
+
+        } else if (resultadoIMC >= 25.0 && resultadoIMC < 29.9) {
+            System.out.println("Status: Levemente acima do peso");
+
+        } else if (resultadoIMC >= 30.0 && resultadoIMC < 34.9) {
+            System.out.println("Status: Obesidade grau 1");
+
+        } else if (resultadoIMC >= 35.0 && resultadoIMC < 39.9) {
+            System.out.println("Status: Obesidade grau 2");
+
+        } else {
+            System.out.println("Status: Obesidade 3 (mórbida)");
+
+        }
+    }
 }
