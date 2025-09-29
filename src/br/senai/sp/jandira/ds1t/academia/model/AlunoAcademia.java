@@ -11,24 +11,24 @@ public class AlunoAcademia {
     public void obterDados(){
         Scanner leitor = new Scanner(System.in);
 
-        System.out.println("------------------------");
+        System.out.print("------------------------");
 
         System.out.println("NOME DO ALUNO: ");
         nomeDoAluno = leitor.nextLine();
 
-        System.out.println("ALTURA DO ALUNO: ");
+        System.out.print("ALTURA DO ALUNO: ");
         altura = leitor.nextDouble();
 
-        System.out.println("PESO DO ALUNO: ");
+        System.out.print("PESO DO ALUNO: ");
         peso = leitor.nextDouble();
 
-        System.out.println("-----------RESULTADO-----------");
+        System.out.print("-----------RESULTADO-----------");
 
         calcularIMC();
         exibirDados();
         exibirClassificacaoDeSaude();
 
-        System.out.println("------------------------");
+        System.out.print("------------------------");
 
     }
 
@@ -37,28 +37,28 @@ public class AlunoAcademia {
     }
 
     public void exibirDados(){
-        System.out.println("Aluno: " + nomeDoAluno);
-        System.out.println("Imc calculado: " + resultadoIMC);
+        System.out.print("Aluno: " + nomeDoAluno);
+        System.out.print("Imc calculado: " + resultadoIMC);
     }
 
     public void exibirClassificacaoDeSaude(){
         if (resultadoIMC < 18.6){
-            System.out.println("Status: Abaixo do peso");
+            System.out.print("Status: Abaixo do peso");
 
         } else if (resultadoIMC >= 18.6 && resultadoIMC < 25.0) {
-            System.out.println("Status: Peso ideal (Parabens)");
+            System.out.print("Status: Peso ideal (Parabens)");
 
         } else if (resultadoIMC >= 25.0 && resultadoIMC < 30.0) {
-            System.out.println("Status: Levemente acima do peso");
+            System.out.print("Status: Levemente acima do peso");
 
         } else if (resultadoIMC >= 30.0 && resultadoIMC < 35.0) {
-            System.out.println("Status: Obesidade grau 1");
+            System.out.print("Status: Obesidade grau 1");
 
         } else if (resultadoIMC >= 35.0 && resultadoIMC < 40.0) {
-            System.out.println("Status: Obesidade grau 2 (Severa)");
+            System.out.print("Status: Obesidade grau 2 (Severa)");
 
         } else {
-            System.out.println("Status: Obesidade grau 3 (Mórbida)");
+            System.out.print("Status: Obesidade grau 3 (Mórbida)");
 
         }
     }
